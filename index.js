@@ -8,8 +8,9 @@ class Node {
 
 class BinarySearchTree {
   constructor() {
-    this.riit = null; // корень bat
+    this.root = null; // корень bat
   }
+
   insert (data) {
     let newNode = new Node(data);
 
@@ -18,10 +19,9 @@ class BinarySearchTree {
     } else {
       this.insertNode(this.root, newNode); // helper method below (вспомогательный метод ниже)
     }
-  };
+  }
 
   insertNode(node, newNode) {
-    console.log(node, newNode)
     if (newNode.data < node.data) {
       if (node.left === null) {
         node.left = newNode;
